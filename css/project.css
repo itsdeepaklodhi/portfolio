@@ -1,0 +1,89 @@
+.section{
+    max-width: 1070px;
+    padding: 5rem 2rem 2rem;
+}
+
+.video{
+
+    max-width: 760px;
+}
+
+.video video{
+    max-width: 100%;
+    height: auto;
+}
+
+.container .info{
+    max-width: 760px;
+    margin-top: 4rem;
+    width: 100%;
+}
+
+.info > div{
+    margin-bottom: 3rem;
+    padding-bottom: 10px;
+}
+
+.info h2{
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+.info .heading{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+
+
+
+.info h3{
+    font-size: 2em;
+  
+}
+
+.info h4{
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.info p{
+    color: var(--third-color);
+    font-size: var(--normal-font-size);
+    margin-bottom: 10px;
+   
+}
+
+.info .used{
+    margin-top: .8rem;
+}
+
+.info .label{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-left: -5px;
+}
+
+.info label{
+    display: inline-block;
+    background: var(--second-color);
+    color: #fff;
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin: 6px;
+    cursor: pointer;
+}
+
+.info p span{
+    
+   font-weight: 600;
+}
+
+.flex{
+    display: flex;
+    align-items: center ;
+}
