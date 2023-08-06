@@ -208,7 +208,8 @@ header.sticky .nav-bar{
 .home-container .info h2{
   font-size: 4em;
   font-weight: 600;
-  line-height: 70px;
+  line-height: 60px;
+  margin-bottom: 10px;
 
 }
 
@@ -289,7 +290,7 @@ header.sticky .nav-bar{
   max-width: 1150px;
   margin-left: auto;
   margin-right: auto;
-  padding: 5rem 2rem 2rem;
+  padding: 5rem 1.5rem 1.5rem;
 }
 
 .sub-section{
@@ -974,6 +975,54 @@ header.sticky .nav-bar{
   cursor: pointer;
 }
 
+.form-modal{
+  z-index: 99999;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: var(--transparent-color-01);
+  backdrop-filter: blur(20px);
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s ease;
+}
+
+.form-modal.active{
+  visibility: visible;
+  opacity: 1;
+}
+
+.form-modal-body{
+  position: relative;
+  background: var(--modal-bg-color);
+  max-width: 600px;
+  margin: 20px;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  transform: translateY(-50px);
+  transition: .5s ease;
+}
+
+.form-modal.active .form-model-body{
+  transform: translateY(0);
+}
+
+.form-modal-close-btn{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  cursor: pointer;
+
+}
+
+.form-modal-body h3{
+  font-size: 1.5em;
+}
+
 
 
 /*=======Footer=======*/
@@ -1273,11 +1322,11 @@ footer a{
 
   .skill-info .skill-container{
     width: auto;
-    flex: 0;
+    /* flex: 1; */
  }
 
   .skill-info .skill-container:first-child{
-    flex: 1;
+    /* flex: 1; */
   }
 
   .skill-info .skill-container:last-child{
@@ -1300,4 +1349,17 @@ footer a{
  }
 
   /*=======Get-in-touch section=======*/
+}
+
+/*=======Media query max-width 730px=======*/
+@media screen and (max-width: 410px){
+
+  .skill-info .skill-container{
+    width: auto;
+    flex: 0;
+ }
+
+  .skill-info .skill-container:first-child{
+    flex: 1;
+  }
 }

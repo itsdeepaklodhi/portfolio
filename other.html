@@ -260,11 +260,8 @@
                 <div class="portfolio-model flex-center">
                   <div class="portfolio-model-body">
                         <i class="fas fa-times portfolio-close-btn"></i>
-                        <h3>Web Design</h3>
-                        <img src="images/port-img6.jpg" alt="">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu
-                          a. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.     
-                        </p>
+                        <h3>Sorry, Message not Sent!</h3>
+                        
                   </div>
                 </div>
               </div>
@@ -272,5 +269,29 @@
           </div>
         </div>
       </section>  
+
+      <script>
+        const portfolioModals = document.querySelectorAll(".portfolio-model");
+const imgCards = document.querySelectorAll(".img-card");
+const porftolioCloseBtns = document.querySelectorAll(".portfolio-close-btn");
+
+var portfolioModal = function (modalClick){
+    portfolioModals[modalClick].classList.add("active");
+}
+
+imgCards.forEach((imgCard, i) => {
+    imgCard.addEventListener("click", ()=>{
+        portfolioModal(i);
+    });
+});
+
+porftolioCloseBtns.forEach((btn)=>{
+    btn.addEventListener("click", ()=>{
+        portfolioModals.forEach((modal)=>{
+            modal.classList.remove("active");
+        });
+    });
+});
+      </script>
 </body>
 </html>

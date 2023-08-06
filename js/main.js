@@ -1,32 +1,28 @@
-//Navigation bar effects on scroll
-window.addEventListener("scroll", function(){
-    const header = document.querySelector("header");
-    header.classList.toggle("sticky", window.scrollY >  0);
-})
+
 
 //Portfolio section - Modal
 
-const portfolioModals = document.querySelectorAll(".portfolio-model");
-const imgCards = document.querySelectorAll(".img-card");
-const porftolioCloseBtns = document.querySelectorAll(".portfolio-close-btn");
+// const portfolioModals = document.querySelectorAll(".portfolio-model");
+// const imgCards = document.querySelectorAll(".img-card");
+// const porftolioCloseBtns = document.querySelectorAll(".portfolio-close-btn");
 
-var portfolioModal = function (modalClick){
-    portfolioModals[modalClick].classList.add("active");
-}
+// var portfolioModal = function (modalClick){
+//     portfolioModals[modalClick].classList.add("active");
+// }
 
-imgCards.forEach((imgCard, i) => {
-    imgCard.addEventListener("click", ()=>{
-        portfolioModal(i);
-    });
-});
+// imgCards.forEach((imgCard, i) => {
+//     imgCard.addEventListener("click", ()=>{
+//         portfolioModal(i);
+//     });
+// });
 
-porftolioCloseBtns.forEach((btn)=>{
-    btn.addEventListener("click", ()=>{
-        portfolioModals.forEach((modal)=>{
-            modal.classList.remove("active");
-        });
-    });
-});
+// porftolioCloseBtns.forEach((btn)=>{
+//     btn.addEventListener("click", ()=>{
+//         portfolioModals.forEach((modal)=>{
+//             modal.classList.remove("active");
+//         });
+//     });
+// });
 
 //Our clients - Swiper
 
@@ -71,6 +67,13 @@ window.addEventListener("scroll", ()=> {
 })
 
 
+//Navigation bar effects on scroll
+window.addEventListener("scroll", function(){
+    const header = document.querySelector("header");
+    header.classList.toggle("sticky", window.scrollY >  0);
+})
+
+
 //Responsive navigation menu toggle
 const menuBtn = document.querySelector(".nav-menu-btn");
 const closeBtn = document.querySelector(".nav-close-btn");
@@ -92,6 +95,44 @@ navItems.forEach(item=>{
         
     })
 })
+
+
+// form
+
+const form  = document.getElementById("form");
+
+const sent  = document.getElementById("sent-modal");
+const notSent = document.getElementById("not-sent-modal");
+
+form.addEventListener("submit", (event)=>{
+    event.preventDefault();
+    
+    const data = new FormData(form);
+
+    // console.log(data.get("message"));
+
+    fetch("https://api.yunistore.in/public/contact",{
+        method: "POST",
+        body: data
+    }).then(res=>{
+        if(res.ok){
+            sent.classList.add("active");
+            form.reset();
+        }
+        else{
+           notSent.classList.add("active");
+        }
+    })
+
+});
+
+document.querySelectorAll(".form-modal-close-btn").forEach((btn)=>{
+        btn.addEventListener("click", ()=>{
+            document.querySelectorAll(".form-modal").forEach(modal=>modal.classList.remove("active"));
+        })
+})
+
+
 
 //Scroll reveal animations
 //Common reveal options to create reveal animations

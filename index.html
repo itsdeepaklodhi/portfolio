@@ -112,7 +112,7 @@
               <div class="description">
                 <div class="card">
                   <div class="img">
-                    <img src="/images/icons/icons8-java-48.png" alt="java">
+                    <img src="images/icons/icons8-java-48.png" alt="java">
                   </div>
                   <div class="name">
                     <span>Java</span>
@@ -120,7 +120,7 @@
                 </div>
                 <div class="card">
                   <div class="img">
-                    <img src="/images/icons/icons8-spring-boot-48.png" alt="Spring">
+                    <img src="images/icons/icons8-spring-boot-48.png" alt="Spring">
                   </div>
                   <div class="name">
                     <span>Spring</span>
@@ -128,7 +128,7 @@
                 </div>
                 <div class="card">
                   <div class="img">
-                    <img src="/images/icons/hibernate-icon.svg" alt="hibernate">
+                    <img src="images/icons/hibernate-icon.svg" alt="hibernate">
                   </div>
                   <div class="name">
                     <span>hibernate</span>
@@ -252,7 +252,7 @@
                           It also enables vendors to market and sell their products to more relevant audience.</div>
                         </p>
                       <div class="goto">
-                        <h4><a href="/project/yunistore.html"><span> View Project <i class="fas fa-arrow-circle-right"></i></span></a></h4>
+                        <h4><a href="/yunistore.html"><span> View Project <i class="fas fa-arrow-circle-right"></i></span></a></h4>
                       </div>
                       <div class="tech">
                         <img src="images/icons/icons8-spring-boot-48.png" alt="">
@@ -277,7 +277,7 @@
                            The website showcases my skills and projects and includes an about me section.
                            It also has a contact me form and displays my contact details.</p>
                       <div class="goto">
-                        <h4><a href=""><span> View Code <i class="fa-brands fa-github"></i></span></a></h4>
+                        <h4><a href="https://github.com/itsdeepaklodhi/portfolio" target="_blank"><span> View Code <i class="fa-brands fa-github"></i></span></a></h4>
                       </div>
                       <div class="tech">
                         <img src="images/icons/icons8-html5-48.png" alt="">
@@ -316,20 +316,34 @@
           </div>
           <div class="contact-right">
             <p>I'm always available to your <br><span>Messages</span></p>
-            <form action="" class="contact-form">
+            <form action="" class="contact-form" id="form">
               <div class="first-row">
-                <input type="text" name="name" placeholder="name">
+                <input type="text" name="name" placeholder="name" required>
               </div>
               <div class="second-row">
-                <input type="text" name="email" placeholder="Email">
-                <input type="text" name="subject" placeholder="Subject">
+                <input type="text" name="email" placeholder="Email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
               </div>
               <div class="third-row">
-                <textarea name="message" id=""  rows="7" placeholder="message"></textarea>
+                <textarea name="message" id=""  rows="7" placeholder="message" required></textarea>
               </div>
               <button class="btn" type="submit">Send Message <i class="fas fa-paper-plane"></i></button>
             </form>
           </div>
+        </div>
+      </div>
+      <div class="form-modal flex-center" id="sent-modal">
+        <div class="form-modal-body">
+              <i class="fas fa-times form-modal-close-btn"></i>
+              <h3>Message Sent.</h3>
+              
+        </div>
+      </div>  
+      <div class="form-modal flex-center"  id="not-sent-modal">
+        <div class="form-modal-body">
+              <i class="fas fa-times form-modal-close-btn"></i>
+              <h3>Sorry, Message not Sent!</h3>
+              
         </div>
       </div>
     </section>
@@ -355,9 +369,9 @@
         <div class="follow group">
           <h3>Follow</h3>
         <ul>
-          <li><a href=""><i class="fab fa-facebook"></i></a></li>
-          <li><a href=""><i class="fab fa-instagram"></i></a></li>
-          <li><a href=""><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=100039114109747"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="https://www.instagram.com/its.deepaklodhi"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.twitter.com/itsdeepaklodhi"><i class="fab fa-twitter"></i></a></li>
         </ul>
         </div>
         
