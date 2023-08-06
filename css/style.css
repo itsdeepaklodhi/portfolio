@@ -174,7 +174,7 @@ header.sticky .nav-bar{
   position: relative
   ;
   max-width: 1250px;
-  min-height: 100vh;
+  min-height: 95vh;
   margin-left: auto;
   margin-right: auto;
   padding: 4rem 2rem;
@@ -240,7 +240,7 @@ header.sticky .nav-bar{
 
 .btn:hover{
   background: var(--hover-color);
-}
+} 
 
 .home-container .home-img{
   position: relative;
@@ -257,7 +257,7 @@ header.sticky .nav-bar{
   color: var(--first-color);
   font-size: var(--normal-font-size);
   font-weight: 500;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .home .scroll-down i{
@@ -290,7 +290,7 @@ header.sticky .nav-bar{
   max-width: 1150px;
   margin-left: auto;
   margin-right: auto;
-  padding: 5rem 1.5rem 1.5rem;
+  padding: 5rem 1.2rem 1.2rem;
 }
 
 .sub-section{
